@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content both horizontally and vertically */
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #FFC107, #E91E63, #2196F3, #4CAF50);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Styling for the button container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+            justify-content: center; /* Center buttons horizontally within rows */
+        }
+
+        .train-link {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px; /* Adjust margin for spacing between buttons */
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .train-link:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .back {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .back:hover {
+            background-color: #555;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Selection</title>
+</head>
+<body>
+<h1>Parking regions</h1> <div class="button-container">
+        <a href="http://127.0.0.1:8000/parking_payment?station=ירושלים" class="train-link">ירושלים</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=תל אביב-יפו" class="train-link">תל אביב-יפו</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=חיפה" class="train-link">חיפה</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=ראשון לציון" class="train-link">ראשון לציון</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=פתח תקווה" class="train-link">פתח תקווה</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station= חולון" class="train-link"> חולון</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=נתניה" class="train-link">נתניה</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=אשדוד" class="train-link">אשדוד</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=בני-ברק" class="train-link">בני-ברק</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=באר שבע" class="train-link">באר שבע</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=רמת גן" class="train-link">רמת גן</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=אשקלון" class="train-link">אשקלון</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=עכו" class="train-link">עכו</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=קריית מוצקין" class="train-link">קריית מוצקין</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=קריית חיים" class="train-link">קריית חיים</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=בתים" class="train-link">בת ים</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=רחובות" class="train-link">רחובות</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=חדרה" class="train-link">חדרה</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=כפר סבא" class="train-link">כפר סבא</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=לוד" class="train-link">לוד</a>
+        <a href="http://127.0.0.1:8000/parking_payment?station=רעננה" class="train-link">רעננה</a>
+    </div>
+<div class="button-container">
+            <button class="back" onclick="window.location.href='http://127.0.0.1:8000/options'">Back</button>
+        </div>
+</body>
+</html>

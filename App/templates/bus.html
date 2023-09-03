@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content both horizontally and vertically */
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #FFC107, #E91E63, #2196F3, #4CAF50);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Styling for the button container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+            justify-content: center; /* Center buttons horizontally within rows */
+        }
+
+        .train-link {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px; /* Adjust margin for spacing between buttons */
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .train-link:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .redirect-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .redirect-button:hover {
+            background-color: #555;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Station Selection</title>
+</head>
+<body>
+<h1>Bus Stations</h1>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/bus_payments?station=תל אביב האוניברסיטה" class="train-link">תל אביב האוניברסיטה</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=תל אביב - סבידור מרכז" class="train-link">תל אביב - סבידור מרכז</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=תל אביב - השלום" class="train-link">תל אביב - השלום</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=תל אביב - ההגנה" class="train-link">תל אביב - ההגנה</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=בת ים - יוספטל" class="train-link">בת ים - יוספטל</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=צומת חולון" class="train-link">צומת חולון</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=חולון - וולפסון" class="train-link">חולון - וולפסון</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=ראשון לציון - משה דיין" class="train-link">ראשון לציון - משה דיין</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=יבנה - מערב" class="train-link">יבנה - מערב</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=אשדוד - עד הלום" class="train-link">אשדוד - עד הלום</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=אשקלון" class="train-link">אשקלון</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=נהריה" class="train-link">נהריה</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=עכו" class="train-link">עכו</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=קריית מוצקין" class="train-link">קריית מוצקין</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=קריית חיים" class="train-link">קריית חיים</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=חוצות המפרץ" class="train-link">חוצות המפרץ</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=מרכזית המפרץ" class="train-link">מרכזית המפרץ</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=חיפה - מרכז השמונה" class="train-link">חיפה - מרכז השמונה</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=חיפה - בת גלים" class="train-link">חיפה - בת גלים</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=חיפה - חוף הכרמל" class="train-link">חיפה - חוף הכרמל</a>
+        <a href="http://127.0.0.1:8000/bus_payments?station=עתלית" class="train-link">עתלית</a>
+    </div>
+<div class="button-container">
+            <button class="redirect-button" onclick="window.location.href='http://127.0.0.1:8000/options'">Back</button>
+        </div>
+</body>
+</html>

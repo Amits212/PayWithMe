@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content both horizontally and vertically */
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #FFC107, #E91E63, #2196F3, #4CAF50);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Styling for the button container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+            justify-content: center; /* Center buttons horizontally within rows */
+        }
+
+        .duration {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px; /* Adjust margin for spacing between buttons */
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .duration:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .back {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .back:hover {
+            background-color: #555;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Station Selection</title>
+</head>
+<body>
+<h1>Bicycle renting</h1>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=30 min&price=5₪" class="duration">30 min</a>
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=1 hour&price=10₪" class="duration">1 hour</a>
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=2 hours&price=20₪" class="duration">2 hours</a>
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=3 hours&price=30₪" class="duration">3 hours</a>
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=4 hours&price=40₪" class="duration">4 hours</a>
+        <a href="http://127.0.0.1:8000/bicycle_payment?duration=24 hours&price=100₪" class="duration">24 hours</a>
+    </div>
+<div class="button-container">
+            <button class="back" onclick="window.location.href='http://127.0.0.1:8000/options'">Back</button>
+        </div>
+</body>
+</html>
